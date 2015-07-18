@@ -9,10 +9,6 @@ RUN		pacman -Scc --noconfirm
 
 RUN		echo -e "net.core.rmem_max = 16777216\nnet.core.wmem_max = 4194304" > /etc/sysctl.d/60-net_buffer.conf
 
-ADD		vpn-up.sh /usr/local/bin/vpn-up.sh
-ADD		vpn-down.sh /usr/local/bin/vpn-down.sh
-RUN		chmod +x /usr/local/bin/*.sh
-
 ADD		openvpn.ini /etc/supervisor.d/openvpn.ini
 ADD		transmission.ini /etc/supervisor.d/transmission.ini
 
