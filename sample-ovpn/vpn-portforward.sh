@@ -7,7 +7,7 @@ do
 sleep 10
 
 PIA_PASSWD_FILE=/etc/openvpn/vpn.cred
-pia_client_id_file=/var/lib/transmission/pia_client_id
+pia_client_id_file=/etc/openvpn/pia_client_id
 transmission_settings_file=/var/lib/transmission/settings.json
 
 pia_username=$(head -1 $PIA_PASSWD_FILE)
