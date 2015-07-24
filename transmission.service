@@ -1,0 +1,12 @@
+[Unit]
+Description=transmission container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a transmission
+ExecStop=/usr/bin/docker stop transmission
+
+[Install]
+WantedBy=local.target
